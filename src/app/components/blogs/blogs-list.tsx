@@ -7,7 +7,7 @@ interface Props {
 }
 const BlogsList = ({ blogs }: Props) => {
     return (
-        <div className="flex flex-col w-full lg:w-[72.36%] gap-8">
+        <div className="flex flex-col w-full lg:w-[72.36%] gap-8 mb-8">
             <div className="h-[4.5rem] flex items-center">
                 <h1 className="text-4xl font-bold ">Tất cả bài viết</h1>
             </div>
@@ -18,8 +18,9 @@ const BlogsList = ({ blogs }: Props) => {
                         <Blog
                             key={blog.slug}
                             blog={blog}
-                            className="h-48 sm:w-[calc(50%-0.75rem)] sm:h-auto"
-                            breakPoint="sm"
+                            className="h-48 sm:w-[calc(50%-0.75rem)] sm:h-auto sm:flex-col"
+                            imageClassName="sm:w-full sm:aspect-square"
+                            infoClassName="sm:h-auto sm:gap-6 sm:items-start sm:w-full"
                         />
                     ))}
                 </div>

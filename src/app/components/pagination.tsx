@@ -50,7 +50,7 @@ function getItems(currentPage: number, finalPage: number): { value: string }[] {
 const Pagination = ({ currentPage, finalPage, path }: Props) => {
     const items = getItems(currentPage, finalPage)
     return (
-        <div className="flex items-center justify-between w-full">
+        <div className="flex items-center justify-between w-full mb-8">
             <Link
                 href={`${path}page=${currentPage - 1}`}
                 className={`flex items-center justify-start h-6 gap-8 ${

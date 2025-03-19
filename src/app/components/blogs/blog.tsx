@@ -7,20 +7,21 @@ import { Blog as BlogType } from "../../types/types"
 
 interface Props {
     blog: BlogType
-    breakPoint: "md" | "sm"
     className?: string
+    imageClassName?: string
+    infoClassName?: string
 }
-const Blog = ({ blog, className, breakPoint }: Props) => {
+const Blog = ({ blog, className, imageClassName, infoClassName }: Props) => {
     return (
         <Link
             href={`${PATHNAMES.Blog}/${blog.slug}`}
-            className={`${cn(
-                `flex flex-row ${breakPoint}:flex-col gap-6`,
-                className
-            )}`}
+            className={`${cn(`flex flex-row gap-6`, className)}`}
         >
             <div
-                className={`relative w-48 h-full ${breakPoint}:w-full ${breakPoint}:aspect-square rounded-3xl`}
+                className={`${cn(
+                    `relative w-48 h-full rounded-3xl`,
+                    imageClassName
+                )}`}
             >
                 <Image
                     src={blog.cover ?? Images.BlogCover}
@@ -29,7 +30,10 @@ const Blog = ({ blog, className, breakPoint }: Props) => {
                 />
             </div>
             <div
-                className={`flex flex-col justify-between h-full ${breakPoint}:h-auto ${breakPoint}:gap-6 ${breakPoint}:items-start ${breakPoint}:w-full`}
+                className={`${cn(
+                    `flex flex-col justify-between h-full`,
+                    infoClassName
+                )}`}
             >
                 <div className="h-[1.625rem] py-1 px-2 flex items-center justify-center text-[#0F4F9E] bg-[#E2F0FE] text-xs font-medium w-fit rounded-3xl">
                     {CATEGORIES_MAP[blog.category]}

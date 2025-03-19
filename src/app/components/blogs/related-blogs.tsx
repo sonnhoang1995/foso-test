@@ -8,7 +8,7 @@ interface Props {
 const RelatedBlogs = ({ blogs }: Props) => {
     return (
         blogs.length > 0 && (
-            <div className="flex flex-col w-full gap-6">
+            <div className="flex flex-col w-full gap-6 mb-8">
                 <p className="text-4xl font-extrabold text-primary-text">
                     Bài Viết Liên Quan
                 </p>
@@ -17,8 +17,9 @@ const RelatedBlogs = ({ blogs }: Props) => {
                         <Blog
                             key={`${blog.slug}-${index}`}
                             blog={blog}
-                            className="h-48 md:w-[calc(100%/3-4rem/3)] md:h-auto"
-                            breakPoint="md"
+                            className="h-48 md:w-[calc(100%/3-4rem/3)] md:h-auto md:flex-col"
+                            imageClassName="md:w-full md:aspect-square"
+                            infoClassName="md:h-auto md:gap-6 md:items-start md:w-full"
                         />
                     ))}
                 </div>
