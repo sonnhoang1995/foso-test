@@ -38,11 +38,11 @@ const Blog = ({ blog, className, imageClassName, infoClassName }: Props) => {
                 <div className="h-[1.625rem] py-1 px-2 flex items-center justify-center text-[#0F4F9E] bg-[#E2F0FE] text-xs font-medium w-fit rounded-3xl">
                     {CATEGORIES_MAP[blog.category]}
                 </div>
-                <p className="text-2xl font-bold text-tertiary-text">
+                <p className="text-base font-bold sm:text-2xl text-tertiary-text">
                     {blog.title}
                 </p>
-                <div className="flex items-center h-6 gap-1.5 text-quinary-text">
-                    <div className="flex items-center h-full gap-2 font-medium">
+                <div className="flex flex-col sm:flex-row sm:items-center h-6 gap-0.5 sm:gap-1.5 text-quinary-text">
+                    <div className="flex items-center h-full gap-1 text-xs font-medium sm:gap-2 sm:text-base">
                         <Image
                             src={Images.CalendarIcon}
                             width={18}
@@ -51,8 +51,8 @@ const Blog = ({ blog, className, imageClassName, infoClassName }: Props) => {
                         />
                         <p>{formatDate(blog.createdAt)}</p>
                     </div>
-                    <div className="h-full border-r-[1px] border-quinary-text"></div>
-                    <div className="flex items-center h-full gap-2 font-medium">
+                    <div className="h-full border-r-[1px] border-quinary-text hidden sm:block"></div>
+                    <div className="flex items-center h-full gap-1 text-xs font-medium sm:gap-2 sm:text-base">
                         <Image
                             src={Images.ClockIcon}
                             width={19.5}
@@ -62,7 +62,7 @@ const Blog = ({ blog, className, imageClassName, infoClassName }: Props) => {
                         <p>{blog.readTime} đọc</p>
                     </div>
                 </div>
-                <div className="flex items-center h-12 gap-4 text-lg font-semibold text-quinary-text">
+                <div className="flex items-center h-12 gap-4 text-base font-semibold sm:text-lg text-quinary-text">
                     <p>Khám phá thêm</p>
                     <Image
                         src={Images.ArrowIcon}

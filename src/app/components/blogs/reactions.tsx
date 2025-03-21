@@ -15,7 +15,7 @@ interface Props {
 
 const Reactions = ({ reactions, total }: Props) => {
     return (
-        <div className="flex flex-col w-full gap-6 pt-6 bg-white h-60 rounded-3xl shadow-[0px_1px_3px_0px_#1212171A]">
+        <div className="flex flex-col w-full gap-6 pt-6 bg-white h-auto rounded-3xl shadow-[0px_1px_3px_0px_#1212171A]">
             <div className="flex flex-col gap-2 h-[3.75rem] justify-center items-center">
                 <p className="text-xl font-extrabold text-tertiary-text">
                     Bạn thấy bài viết như thế nào?
@@ -24,11 +24,11 @@ const Reactions = ({ reactions, total }: Props) => {
                     {total} phản hồi
                 </p>
             </div>
-            <div className="flex items-center justify-center w-full gap-8">
+            <div className="flex flex-wrap items-center justify-center w-full gap-0 sm:gap-8 sm:flex-nowrap">
                 {Object.keys(reactions).map((key: string, index: number) => (
                     <div
                         key={`${key}-${index}`}
-                        className="w-[10%] h-[6.875rem] flex flex-col p-4 items-center hover:outline-1 hover:outline-[#10805B] hover:cursor-pointer"
+                        className="w-[calc(100%/3)] sm:w-[10%] h-[6.875rem] flex flex-col p-4 items-center hover:outline-1 hover:outline-[#10805B] hover:cursor-pointer"
                     >
                         <Image
                             src={REACTIONS_MAP[key].imgSrc}

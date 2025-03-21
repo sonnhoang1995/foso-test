@@ -72,7 +72,7 @@ const Pagination = ({ currentPage, finalPage, path }: Props) => {
                 <p
                     className={`font-semibold ${
                         currentPage === 1 ? "text-[#B3C5D4]" : "text-[#4D5F6E]"
-                    }`}
+                    } hidden sm:inline`}
                 >
                     Trang trước
                 </p>
@@ -90,7 +90,7 @@ const Pagination = ({ currentPage, finalPage, path }: Props) => {
                             `${currentPage}` === item.value
                                 ? "bg-[#D1F7EA] rounded-[0.5rem] text-quaternary-text"
                                 : "text-[#809FB8]"
-                        } w-10 h-10 flex items-center justify-center font-semibold`}
+                        } w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center font-semibold`}
                     >
                         {item.value}
                     </Link>
@@ -109,7 +109,7 @@ const Pagination = ({ currentPage, finalPage, path }: Props) => {
                         currentPage === finalPage
                             ? "text-[#B3C5D4]"
                             : "text-[#4D5F6E]"
-                    }`}
+                    } hidden sm:inline`}
                 >
                     Trang kế tiếp
                 </p>

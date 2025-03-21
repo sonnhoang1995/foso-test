@@ -49,7 +49,7 @@ const BlogCategories = ({ categories }: Props) => {
                         placeholder="Tìm kiếm bài viết"
                         type="search"
                         id="search"
-                        className="w-full py-3 pl-6 pr-2 h-12 bg-white rounded-[0.75rem] text-base border-none shadow-md outline-none focus-visible:outline-none focus-visible:ring-offset-0 focus-visible:ring-opacity-0"
+                        className="w-full py-3 pl-6 pr-2 h-12 bg-white rounded-[0.75rem] text-xs sm:text-base border-none shadow-md outline-none focus-visible:outline-none focus-visible:ring-offset-0 focus-visible:ring-opacity-0"
                         value={value}
                         onKeyDown={handleKeyDown}
                         onChange={handleChange}
