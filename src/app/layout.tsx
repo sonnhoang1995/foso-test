@@ -24,7 +24,7 @@ export default function RootLayout({
     children: React.ReactNode
 }>) {
     return (
-        <html lang="vi" className="scroll-smooth">
+        <html lang="vi" className={`scroll-smooth ${geistSans.className}`}>
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >

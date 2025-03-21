@@ -27,7 +27,7 @@ const MenuButton = () => {
             <DrawerTrigger>
                 <Image src={Images.MenuIcon} alt="menu-icon" />
             </DrawerTrigger>
-            <DrawerContent className="h-screen w-[70vw] p-4 lg:hidden">
+            <DrawerContent className="h-screen w-[70vw] p-4 lg:hidden pt-24 sm:pt-4">
                 <VisuallyHidden>
                     <DrawerTitle></DrawerTitle>
                 </VisuallyHidden>

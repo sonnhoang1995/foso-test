@@ -30,11 +30,10 @@ const BlogDetail = ({ blog, reactions, totalReactions }: Props) => {
                 </h1>
                 <div className="flex items-center justify-between w-full h-16">
                     <div className="flex items-center justify-between w-auto gap-3">
-                        <div className="w-16 h-16 rounded-full bg-white px-1.5 py-[0.3125rem] flex items-center justify-center border-[1px] border-[#F1F5F7]">
+                        <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-white px-1.5 py-[0.3125rem] flex items-center justify-center border-[1px] border-[#F1F5F7]">
                             <Image
                                 src={blog.author.avatar ?? Images.SmallFosoLogo}
-                                width="34"
-                                height="32"
+                                className={`w-[25.5rem] h-6 sm:w-[26rem] sm:h-8`}
                                 alt="foso-logo"
                             />
                         </div>
@@ -42,27 +41,27 @@ const BlogDetail = ({ blog, reactions, totalReactions }: Props) => {
                             <p className="text-xs font-medium sm:text-sm text-quinary-text">
                                 Tác giả
                             </p>
-                            <p className="font-bold text:-sm sm:text-base text-tertiary-text text-nowrap">
+                            <p className="text-sm font-bold sm:text-base text-tertiary-text text-nowrap">
                                 {blog.author.name}
                             </p>
                         </div>
                     </div>
-                    <div className="flex items-center h-6 gap-3 text-quinary-text">
-                        <div className="flex items-center h-full gap-2 text-sm font-medium sm:text-base">
+                    <div className="flex items-center h-6 gap-1 sm:gap-3 text-quinary-text">
+                        <div className="flex items-center justify-end h-full gap-1 text-xs font-medium sm:gap-2 sm:justify-start ">
                             <Image
                                 src={Images.CalendarIcon}
-                                width={18}
-                                height={19.5}
+                                className="w-[0.84375rem] h-[0.9140625rem] sm:w-[1.125rem] sm:h-[1.21875rem]"
                                 alt="calendar-icon"
                             />
-                            <p>Cập nhật vào: {formatDate(blog.createdAt)}</p>
+                            <p className="w-[70%] sm:w-auto">
+                                Cập nhật vào: {formatDate(blog.createdAt)}
+                            </p>
                         </div>
                         <div className="h-full border-r-[1px] border-quinary-text"></div>
-                        <div className="flex items-center h-full gap-2 text-sm font-medium sm:text-base">
+                        <div className="flex items-center h-full gap-1 text-xs font-medium sm:gap-2 sm:text-base">
                             <Image
                                 src={Images.ClockIcon}
-                                width={19.5}
-                                height={19.5}
+                                className="w-[0.9140625rem] h-[0.9140625rem] sm:w-[1.21875rem] sm:h-[1.21875rem]"
                                 alt="calendar-icon"
                             />
                             <p>{blog.readTime} đọc</p>
